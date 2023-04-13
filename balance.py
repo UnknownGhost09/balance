@@ -14,4 +14,4 @@ client = Client(api_key=API_KEY,api_secret=SECRET_KEY,)
 
 
 balance = client.get_account()['balances']
-print(balance)
+balance=[i for i in balance if i.get('asset')=='USDT'] 
